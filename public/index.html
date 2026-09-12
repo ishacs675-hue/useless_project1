@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>enthinavo.lol — You Did What?</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+  <!-- FLOATING DECORATIONS -->
+
+  <div class="blob blob-one"></div>
+  <div class="blob blob-two"></div>
+  <div class="blob blob-three"></div>
+
+  <div class="floating-star star-one">✦</div>
+  <div class="floating-star star-two">✧</div>
+  <div class="floating-star star-three">✦</div>
+
+  <main class="app">
+
+
+    <!-- ==========================================
+         HEADER
+         ========================================== -->
+
+    <header class="header">
+
+      <div class="logo">
+        enthinavo<span>.lol</span>
+      </div>
+
+      <div class="tiny-status">
+        ● judging nonsense
+      </div>
+
+    </header>
+
+
+    <!-- ==========================================
+         HOME
+         ========================================== -->
+
+    <section
+      class="home"
+      id="heroSection"
+    >
+
+      <div class="hello-pill">
+        ✨ welcome to the most unnecessary website
+      </div>
+
+
+      <h1>
+
+        SO...
+        <span>WHAT DID YOU DO?</span>
+
+      </h1>
+
+
+      <p class="subtitle">
+
+        Tell us what happened.
+        We'll turn it into an achievement you absolutely did not need.
+
+      </p>
+
+
+      <!-- INPUT -->
+
+      <div class="input-box">
+
+        <div class="input-top">
+
+          <span>📝 YOUR CONFESSION</span>
+
+          <span id="charCount">
+            0 / 500
+          </span>
+
+        </div>
+
+
+        <textarea
+          id="actionInput"
+          maxlength="500"
+          placeholder="I went to the kitchen for water and came back with snacks..."
+        ></textarea>
+
+
+        <div class="input-bottom">
+
+          <span class="input-hint">
+            Be honest. Or don't. We probably won't know.
+          </span>
+
+
+          <button
+            id="judgeButton"
+            class="judge-button"
+          >
+
+            JUDGE ME 💀
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <p class="keyboard-hint">
+        <kbd>Ctrl</kbd>
+        +
+        <kbd>Enter</kbd>
+        to unleash the judgement
+      </p>
+
+
+      <!-- EXAMPLE CHIPS -->
+
+      <div class="examples">
+
+        <span>try:</span>
+
+        <button onclick="document.getElementById('actionInput').value='I opened the fridge for the fourth time.'">
+          opened the fridge again
+        </button>
+
+        <button onclick="document.getElementById('actionInput').value='I studied for ten minutes.'">
+          studied for 10 minutes
+        </button>
+
+        <button onclick="document.getElementById('actionInput').value='I went upstairs and forgot why.'">
+          forgot why I went upstairs
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         LOADING
+         ========================================== -->
+
+    <section
+      class="loading-section hidden"
+      id="loadingSection"
+    >
+
+      <div class="loading-face">
+        👀
+      </div>
+
+      <h2>
+        HOLD ON...
+      </h2>
+
+      <p id="loadingText">
+        Thinking way too hard about this...
+      </p>
+
+      <div class="loading-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="loading-note">
+        This is taking longer than it should.
+        Perfect.
+      </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         RESULT
+         ========================================== -->
+
+    <section
+      class="result-section hidden"
+      id="resultSection"
+    >
+
+
+      <div class="result-intro">
+
+        <span>
+          ✨ CONGRATULATIONS
+        </span>
+
+        <p>
+          We have reviewed the situation.
+        </p>
+
+      </div>
+
+
+      <!-- ACHIEVEMENT -->
+
+      <div class="achievement-card">
+
+        <div class="confetti-text">
+          ✦ ✧ ✦
+        </div>
+
+        <div class="trophy">
+          🏆
+        </div>
+
+        <div class="achievement-small">
+          ACHIEVEMENT UNLOCKED
+        </div>
+
+        <h2 id="badge">
+          CONGRATULATIONS,
+          YOU DID A THING
+        </h2>
+
+        <div
+          class="rarity"
+          id="rarity"
+        >
+          ✨ RARE
+        </div>
+
+        <div class="achievement-bottom">
+          nobody asked for this achievement
+        </div>
+
+      </div>
+
+
+      <!-- STATS -->
+
+      <div class="stats-card">
+
+        <div class="stats-heading">
+
+          <div>
+            📊 THE IMPORTANT STUFF
+          </div>
+
+          <span>
+            completely made up
+          </span>
+
+        </div>
+
+        <div id="statsContainer"></div>
+
+      </div>
+
+
+      <!-- VERDICT -->
+
+      <div class="verdict-card">
+
+        <div class="verdict-title">
+          🤨 SO... ABOUT THAT
+        </div>
+
+        <p
+          class="verdict"
+          id="verdict"
+        ></p>
+
+      </div>
+
+
+      <!-- REWARD + BENEFIT -->
+
+      <div class="details-grid">
+
+
+        <div class="detail-card reward-card">
+
+          <span class="detail-icon">
+            🎁
+          </span>
+
+          <div>
+
+            <div class="detail-label">
+              YOU GOT
+            </div>
+
+            <p id="reward">
+              +100 Useless XP
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="detail-card benefit-card">
+
+          <span class="detail-icon">
+            🤷
+          </span>
+
+          <div>
+
+            <div class="detail-label">
+              ACTUAL BENEFIT
+            </div>
+
+            <p id="actualBenefit">
+              Nothing important happened.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- AGAIN -->
+
+      <button
+        class="again-button"
+        id="judgeAgain"
+      >
+
+        DO SOMETHING ELSE STUPID ↻
+
+      </button>
+
+
+      <p class="result-footer">
+        Your achievement has been recorded.
+        Nobody will ever need to know.
+      </p>
+
+
+    </section>
+
+
+
+    <!-- ERROR -->
+
+    <div
+      class="error-message hidden"
+      id="errorMessage"
+    ></div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+      <span>
+        enthinavo.lol
+      </span>
+
+      <span>
+        made for absolutely no reason
+      </span>
+
+    </footer>
+
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
